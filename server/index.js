@@ -19,7 +19,8 @@ app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(err.status || 500).send(err.message || 'Internal server error');
 });
-const PORT = 3000;
+
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
