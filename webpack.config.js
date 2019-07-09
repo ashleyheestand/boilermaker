@@ -5,12 +5,12 @@ module.exports = {
     filename: './public/bundle.js',
   },
   mode: 'development',
-  devtool: 'source-maps',
+  context: __dirname,
+  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: resolve(__dirname, './client'),
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
