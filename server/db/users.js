@@ -60,3 +60,4 @@ function setSaltAndPassword(user) {
 }
 
 module.exports = User;
+
