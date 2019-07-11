@@ -5,6 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const db = require('./db/database');
 const dbStore = new SequelizeStore({ db: db });
 const passport = require('passport');
 
